@@ -1,0 +1,7 @@
+
+Stage this folder on access
+
+Then from access you can:
+$ ./install-taxi.sh <hostname>
+$ ./install-taxi.sh sa21-taxi
+
