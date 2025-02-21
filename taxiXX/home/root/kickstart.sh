@@ -1,6 +1,9 @@
 #!/bin/sh
 
 # Initial TAXI hub setup
+# M.Kauer
+# 2025-02-21
+
 
 # FPGA Firmware
 #----------------------------
@@ -38,6 +41,3 @@ chmod go-rwx /home/root
 chmod -R go-rwx /home/root/.ssh
 
 
-# misc
-#----------------------------
-cp /home/root/bin/unison-2.48.4-armel /bin/unison
