@@ -32,6 +32,12 @@ for n in 2 3 4 5 ; do ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/S63udaqdrv.d; d
 for n in 0 1 2 3 4 5 6 ; do echo $n; ls /etc/rc${n}.d; done
 
 
+# Permissions
+#----------------------------
+chmod go-rwx /home/root
+chmod -R go-rwx /home/root/.ssh
+
+
 # misc
 #----------------------------
 cp /home/root/bin/unison-2.48.4-armel /bin/unison
