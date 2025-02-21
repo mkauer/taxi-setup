@@ -1,0 +1,24 @@
+
+0x216_markus_taxitop_icescint28_5_2020.bit
+----------------------------------------------
+the standard/default firmware that is/has been used from Markus
+
+
+0x217_taxitop_icescint_06_11_2020_Taxi_3.1.bit
+----------------------------------------------
+like v216 but with power polarity inversion
+
+
+taxiTop_iceScint_0x0301.bit
+----------------------------------------------
+800MSa/s; trigger info in output data; much faster implementation;
+no timing constraints complaints (happened once);
+constant FIRMWAREVERSION : std_logic_vector(15 downto 0) := x"0301"; -- AN 2023-09-01
+
+
+taxiTop_iceScint_0x0302.bit
+----------------------------------------------
+same as 0x0301,
+sampling rate added into the MISC packet (word 4), for 800MSa/s -- 0x0320 (= 800 decimal)
+
+
