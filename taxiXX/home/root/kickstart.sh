@@ -2,14 +2,14 @@
 
 # Initial TAXI hub setup
 # M.Kauer
-# 2025-02-21
+# 2025-02-24
 
 
 # FPGA Firmware
 #----------------------------
 #FPGA="0x217_taxitop_icescint_06_11_2020_Taxi_3.1.bit"
-#FPGA="taxiTop_iceScint_0x0301.bit"
-FPGA="taxiTop_iceScint_0x0302.bit"
+FPGA="taxiTop_iceScint_0x0301.bit"
+#FPGA="taxiTop_iceScint_0x0302.bit"  # this one has issues
 ln -sf /opt/taxi/firmware/${FPGA} /opt/taxi/firmware/default-firmware
 fpgainit -f /opt/taxi/firmware/default-firmware
 firmware-version.sh
