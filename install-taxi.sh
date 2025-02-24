@@ -20,8 +20,8 @@ chmod -R go-rwx ./taxiXX/home/root/.ssh
 chmod u+x ./taxiXX/home/root/kickstart.sh
 
 # copy files over
-${rsync} ./taxiXX/* ${host}:/
+${rsync} ./taxiXX/* root@${host}:/
 
 # run the kickstart script
-ssh $host "/home/root/kickstart.sh"
+ssh root@${host} "/home/root/kickstart.sh"
 

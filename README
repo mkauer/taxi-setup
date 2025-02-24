@@ -1,7 +1,8 @@
 
-Stage this folder on access
+# Stage this folder on your user home on access:
+[mkauer@access ~]$ git clone git@github.com:mkauer/taxi-setup.git 
 
-Then from access you can:
-$ ./install-taxi.sh <hostname>
-$ ./install-taxi.sh sa21-taxi
+# Then from access you can run install-taxi.sh <taxi-host>
+[mkauer@access ~]$ cd taxi-setup/
+[mkauer@access taxi-setup]$ ./install-taxi.sh saps-taxi
 
