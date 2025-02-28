@@ -14,7 +14,7 @@ host=$1
 rsync="/usr/bin/rsync --perms --times --recursive --checksum --partial --inplace --progress --timeout=120"
 
 # get some permissions fixed first (if from github)
-chmod go-w ./taxiXX/*
+chmod -R go-w ./taxiXX/*
 chmod go-rwx ./taxiXX/home/root
 chmod -R go-rwx ./taxiXX/home/root/.ssh
 chmod u+x ./taxiXX/home/root/kickstart.sh
