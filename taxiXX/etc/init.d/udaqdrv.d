@@ -1,13 +1,8 @@
 #!/bin/sh
-#
-# Init Script to load the udaq driver
-#
-#################################################################################
 
 case "$1" in 
-start)		insmod /opt/taxi/udaq/platform/udaqdrv.ko ;;
-stop)		rmmod udaqdrv.ko ;;
-restart)	rmmod udaqdrv.ko
-		insmod /opt/taxi/udaq/platform/udaqdrv.ko ;;
+    start)	/sbin/insmod /opt/taxi/udaq/platform/udaqdrv.ko ;;
+    stop)	/sbin/rmmod udaqdrv.ko ;;
+    restart)	/sbin/rmmod udaqdrv.ko
+		/sbin/insmod /opt/taxi/udaq/platform/udaqdrv.ko ;;
 esac
-

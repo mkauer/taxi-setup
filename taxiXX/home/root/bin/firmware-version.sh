@@ -1,13 +1,11 @@
 #!/bin/sh
 
-
 # check if field_hub is already running
-running=`ps ux | grep -v grep | grep field_hub`
-if [ ! -z "$running" ]; then
-    echo "ERROR: The field_hub application is running."
+check=`/home/root/bin/running.sh`
+if [ ! -z "$check" ]; then
+    echo "ERROR: field_hub or dump_hist is running."
     exit 1
 fi
-
 
 year=`smcrw -r 8`
 year=${year##*x}

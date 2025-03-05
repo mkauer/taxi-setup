@@ -7,8 +7,5 @@ if [ ! -z "$check" ]; then
     exit 1
 fi
 
-for n in $CHANS; do
-    data=`echo "$1" | udaq_terminal $n | grep ">" | grep -v "Good" `
-    echo "Ch-$n $data"
-done
+reprogram $CHANS /opt/taxi/udaq/firmware/firmware.bin
 
