@@ -2,7 +2,7 @@
 
 # Initial TAXI hub setup
 # M.Kauer
-# 2025-02-24
+# 2025-03-05
 
 
 source /home/root/.profile
@@ -47,4 +47,6 @@ for n in 2 3 4 5 ; do ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/S63udaqdrv.d; d
 chmod go-rwx /home/root
 chmod -R go-rwx /home/root/.ssh
 
+
+echo "DONE"
 

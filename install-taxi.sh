@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # copy files to a taxi host and run the kickstart.sh
-# version: 2025-02-24
+# version: 2025-03-05
 
 
 if [ -z "$1" ]; then
@@ -20,8 +20,10 @@ chmod -R go-rwx ./taxiXX/home/root/.ssh
 chmod u+x ./taxiXX/home/root/kickstart.sh
 
 # copy files over
+echo "copying files to ${host} ..."
 ${rsync} ./taxiXX/* root@${host}:/
 
 # run the kickstart script
+echo "running the kickstart ..."
 ssh root@${host} "/home/root/kickstart.sh"
 
