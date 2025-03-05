@@ -1,8 +1,13 @@
 
-# Stage this folder on your user home on access:
+# Stage this package in your /home/user on access:
 [mkauer@access ~]$ git clone git@github.com:mkauer/taxi-setup.git 
 
-# Then from access you can run install-taxi.sh <taxi-host>
+# Then from access you can run the install-taxi.sh <taxi-hostname>
 [mkauer@access ~]$ cd taxi-setup/
 [mkauer@access taxi-setup]$ ./install-taxi.sh saps-taxi
+
+
+# Scint panel configs can be updated/reproduced with ./config-tools/gen-station-configs.py
+# you can edit the threshold setting by changing line
+# THRESHOLD = 800
 
