@@ -71,7 +71,14 @@ fi
 
 # restart some stuff
 #------------------------------------------
-/etc/init.d/ntpd stop; sleep 2; /etc/init.d/ntpd start
+# ntpd service doesn't stop correctly so...
+pid=`cat /var/run/ntp.pid`
+pid2=$(( $pid + 1 ))
+/etc/init.d/ntpd stop
+echo "killing ${pid2}"
+kill -9 ${pid2}
+/etc/init.d/ntpd start
+# restart syslog thing
 /etc/init.d/syslog.busybox restart
 
 
