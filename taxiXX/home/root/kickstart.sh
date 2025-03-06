@@ -71,7 +71,7 @@ fi
 
 # restart some stuff
 #------------------------------------------
-/etc/init.d/ntpd force-reload
+/etc/init.d/ntpd stop; sleep 2; /etc/init.d/ntpd start
 /etc/init.d/syslog.busybox restart
 
 
