@@ -21,10 +21,10 @@ chmod ug+x       ./taxiXX/home/root/kickstart.sh
 chmod ugo+x      ./taxiXX/etc/init.d/*.d
 
 # copy files over
-echo "\nCopying files to ${host} ..."
+echo -e "\nCopying files to ${host} ..."
 ${rsync} ./taxiXX/* root@${host}:/
 
 # run the kickstart script
-echo "\nRunning the kickstart ..."
+echo -e "\nRunning the kickstart ..."
 ssh root@${host} "/home/root/kickstart.sh"
 

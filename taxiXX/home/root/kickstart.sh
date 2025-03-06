@@ -4,8 +4,9 @@
 # M.Kauer
 version=2025-03-05
 
-
+echo $PATH
 source /home/root/.profile
+export PATH=/sbin:$PATH
 
 
 # ssh permissions
