@@ -2,7 +2,7 @@
 
 # Initial TAXI hub setup
 # M.Kauer
-version=2025-03-05
+version=2025-03-11
 
 
 source /home/root/.profile
