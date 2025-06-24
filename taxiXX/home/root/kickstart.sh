@@ -31,8 +31,9 @@ DIST="udaq-dist-dec_26_2024"
 rm -r /opt/taxi/udaq
 ln -sf /opt/taxi/sfw/${DIST} /opt/taxi/udaq
 ls -hAl /opt/taxi/udaq
-FIRM=`ls /opt/taxi/udaq/firmware`
-ln -sf /opt/taxi/udaq/firmware/${FIRM} /opt/taxi/udaq/firmware/firmware.bin
+FIRM=`ls /opt/taxi/udaq/firmware/udaq*.bin`
+echo $FIRM
+ln -sf ${FIRM} /opt/taxi/udaq/firmware/firmware.bin
 ls -hAl /opt/taxi/udaq/firmware/firmware.bin
 
 
