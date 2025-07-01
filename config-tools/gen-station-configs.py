@@ -11,6 +11,7 @@ CONFIGS   = '../taxiXX/home/root/udaq-config'
 SPOOL     = './spool.cfg'
 TEMP_CTRL = './ext_temp_ctrl.cfg'
 
+# adc bins past the pedestal
 THRESHOLD = 800
 
 

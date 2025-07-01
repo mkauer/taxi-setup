@@ -1,0 +1,4 @@
+driftfile /etc/ntp.drift
+logfile  /var/log/ntp.log
+server ntp1.sptsn.icecube.wisc.edu
+server ntp2.sptsn.icecube.wisc.edu
