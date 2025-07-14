@@ -37,6 +37,11 @@ ln -sf ${FIRM} /opt/taxi/udaq/firmware/firmware.bin
 ls -hAl /opt/taxi/udaq/firmware/firmware.bin
 
 
+# copy udaq config files?
+#------------------------------------------
+#cp -Rf /home/root/udaq-config_20250226 /home/root/udaq-config
+
+
 # Runtime init scripts for udaqdrv.ko and fpgaboot
 #------------------------------------------
 for n in 0 1 6 ; do
