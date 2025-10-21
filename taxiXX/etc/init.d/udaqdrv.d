@@ -1,4 +1,5 @@
 #!/bin/sh
+# /etc/init.d/udaqdrv.d
 
 case "$1" in 
     start)	/sbin/insmod /opt/taxi/udaq/platform/udaqdrv.ko ;;

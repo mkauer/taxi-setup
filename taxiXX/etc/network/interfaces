@@ -1,5 +1,6 @@
-# /etc/network/interfaces -- configuration file for ifup(8), ifdown(8)
- 
+#-*-sh-*-
+# /etc/network/interfaces
+
 # The loopback interface
 auto lo
 iface lo inet loopback

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Initial TAXI hub setup
-# M.Kauer
-version=2025-08-28
+# mkauer
+version=2025-10-21
 
 
 source /home/root/.profile
@@ -19,9 +19,9 @@ chmod -R go-rwx /home/root/.ssh
 #------------------------------------------
 #FPGA="0x217_taxitop_icescint_06_11_2020_Taxi_3.1.bit"
 FPGA="taxiTop_iceScint_0x0301.bit"
-rm /opt/taxi/firmware/default-firmware
-ln -sf /opt/taxi/firmware/${FPGA} /opt/taxi/firmware/default-firmware.bit
-ls -hAl /opt/taxi/firmware/default-firmware.bit
+rm /opt/taxi/firmware/default*
+ln -sf /opt/taxi/firmware/${FPGA} /opt/taxi/firmware/defaultFirmware.bit
+ls -hAl /opt/taxi/firmware/defaultFirmware.bit
 
 
 # FieldHub Application
@@ -44,18 +44,20 @@ ls -hAl /opt/taxi/udaq/firmware/firmware.bin
 
 # Runtime init scripts for udaqdrv.ko and fpgaboot
 #------------------------------------------
-for n in 0 1 6 ; do
-    ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/K63udaqdrv.d
-    ln -sf /etc/init.d/fpgaboot.d /etc/rc${n}.d/K41fpgaboot.d
-done
 for n in 2 3 4 5 ; do
-    ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/S63udaqdrv.d
     ln -sf /etc/init.d/fpgaboot.d /etc/rc${n}.d/S41fpgaboot.d
+    ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/S63udaqdrv.d
 done
-for n in 0 1 2 3 4 5 6 ; do
-    rm /etc/init.d/fpgaboot.d.00${n}
-    ln -sf /etc/init.d/fpgaboot.d /etc/init.d/fpgaboot.d.00${n}
+for n in 0 1 6 ; do
+    ln -sf /etc/init.d/fpgaboot.d /etc/rc${n}.d/K41fpgaboot.d
+    ln -sf /etc/init.d/udaqdrv.d /etc/rc${n}.d/K63udaqdrv.d
 done
+#for n in 0 1 2 3 4 5 6 ; do
+#    rm /etc/init.d/fpgaboot.d.00${n}
+#    ln -sf /etc/init.d/fpgaboot.d /etc/init.d/fpgaboot.d.00${n}
+#done
+rm /etc/init.d/fpgaboot.d.0*
+rm /etc/init.d/udaqdrv.d.0*
 #ls -hAl /etc/rc?.d/*udaqdrv.d
 #ls -hAl /etc/rc?.d/*fpgaboot.d
 #ls -hAl /etc/init.d/fpgaboot.d*

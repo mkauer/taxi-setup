@@ -17,6 +17,7 @@ chmod -R go-w    ./taxiXX/*
 chmod go-rwx     ./taxiXX/home/root
 chmod -R go-rwx  ./taxiXX/home/root/.ssh
 chmod ug+x       ./taxiXX/home/root/kickstart.sh
+chmod ug+x       ./taxiXX/home/root/rekick.sh
 chmod ugo+x      ./taxiXX/etc/init.d/*.d
 
 # copy files over
