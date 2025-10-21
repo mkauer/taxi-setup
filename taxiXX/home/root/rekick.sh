@@ -10,6 +10,8 @@ version=2025-10-21
 echo -e "search psl.spts.icecube.wisc.edu sptsn.icecube.wisc.edu spts.icecube.wisc.edu scint.spts.icecube.wisc.edu ara.spts.icecube.wisc.edu nts.spts.icecube.wisc.edu vpn.spts.icecube.wisc.edu pub.icecube.wisc.edu icecube.wisc.edu wipac.wisc.edu" > /var/run/resolv.conf
 echo -e "nameserver 10.2.9.7" >> /var/run/resolv.conf
 echo -e "nameserver 10.2.9.8" >> /var/run/resolv.conf
+cp /var/run/resolv.conf /var/volatile/run/resolv.conf
+cp /var/run/resolv.conf /etc/resolv.conf
 
 echo -e "auto lo" > /etc/network/interfaces
 echo -e "iface lo inet loopback" >> /etc/network/interfaces
