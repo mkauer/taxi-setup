@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # copy files to a taxi host and run the kickstart.sh
-# 2025-08-28
+# 2025-10-21
 
 if [ -z "$1" ]; then
     echo "specify a hostname"
