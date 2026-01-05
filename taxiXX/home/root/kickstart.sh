@@ -84,3 +84,11 @@ fi
 echo "$version" > /home/root/.version
 echo "DONE"
 
+
+
+### TO DO
+# update hostname file
+# /etc/hostname
+# hostname -F /etc/hostname
+
+
