@@ -13,7 +13,7 @@ fi
 station=$(echo `hostname` | cut -d '_' -f 2)
 
 # greater than 60 seconds to record one HV/Threshold auto-update
-field_hub -c "./hub.cfg" -r "./${station}-taxi.cfg" -l 70
+field_hub -c "./hub.cfg" -r "./${station}-taxi.cfg" --log-level=info -l 70
 
 # show results of the test run
 run=`ls /home/root/data/udaq/ | grep run_ | sort -r | head -n 1`
